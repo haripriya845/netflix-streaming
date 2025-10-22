@@ -52,18 +52,19 @@ netflix-clone/
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+---
+```
 ## Setup Instructions
 
+
 1. **Clone the repository**
-```
 git clone repo-url
-```
+
 
 2. **Navigate into the project folder**
-```
+
 cd netflix-clone
-```
+
 
 3. **Install dependencies**
 ```
