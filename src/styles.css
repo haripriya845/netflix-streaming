@@ -1,0 +1,165 @@
+/* General body styles */
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Home container */
+.home-container {
+  background-color: #141414;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Netflix-like section heading */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 20px 30px 10px;
+  color: #fff;
+}
+
+/* Scrollable horizontal row */
+.movie-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 30px;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbars for clean look */
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
+.movie-row {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Each movie card */
+.movie-card {
+  position: relative;
+  min-width: 180px;
+  height: 270px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.movie-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+/* Poster & video styling */
+.movie-card img,
+.movie-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover fade effect between poster and video */
+.movie-card video {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover video {
+  opacity: 1;
+}
+
+.movie-card:hover img {
+  opacity: 0;
+}
+
+/* Optional title overlay */
+.movie-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+/* Fullscreen player container */
+.player-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Fullscreen video */
+.player-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Back button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive layout for tablets and mobiles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.3rem;
+    margin: 15px 20px 10px;
+  }
+
+  .movie-card {
+    min-width: 140px;
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.1rem;
+    margin: 10px 15px;
+  }
+
+  .movie-card {
+    min-width: 120px;
+    height: 180px;
+  }
+}

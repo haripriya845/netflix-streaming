@@ -1,0 +1,148 @@
+.banner {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to top, #141414, transparent);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+    background-position: center top;
+  }
+}
+
+
+/* text and buttons */
+.banner-contents {
+  position: relative;
+  z-index: 2;
+  padding: 80px 30px;
+  max-width: 600px;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.banner-description {
+  font-size: 1rem;
+  line-height: 1.3;
+  max-width: 70%;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.banner-btn {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 25px;
+  background-color: rgba(51, 51, 51, 0.5);
+  transition: all 0.2s ease;
+}
+
+.banner-btn.play {
+  background-color: #e50914;
+}
+
+.banner-btn:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* fade bottom */
+.banner-fade {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #141414, transparent);
+  z-index: 1;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  /* .banner {
+    height: 70vh;
+    justify-content: flex-end;
+  } */
+
+  .banner-contents {
+    padding: 50px 20px;
+    max-width: 90%;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-description {
+    font-size: 0.9rem;
+    max-width: 90%;
+   
+  }
+
+  .banner-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 60vh;
+  }
+
+  .banner-title {
+    font-size: 1.6rem;
+  }
+
+  .banner-description {
+    font-size: 0.8rem;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .banner-btn {
+    width: fit-content;
+  }
+}
+.netflix-head {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e50914;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
