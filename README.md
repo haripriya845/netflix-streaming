@@ -1,16 +1,88 @@
-# React + Vite
+#  Netflix Clone (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Netflix web app prototype** built using **React.js**.  
+It simulates a streaming experience by displaying a random movie banner,  
+interactive hover previews, and fullscreen playback — inspired by Netflix UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Dynamic Banner:** A random movie appears on each refresh.
+- **Play Button:** Opens the selected movie in fullscreen video mode.
+- **Back Button:** Returns smoothly to the main home screen.
+-  **Movie Grid:** Displays 9 sample movies fetched from local data.
+-  **Responsive Design:** Works seamlessly on both desktop and mobile.
+-  **Instant Transitions:** Built using React Hooks (`useState`, `useEffect`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer | Technology Used |
+|--------|------------------|
+| **Frontend Framework** | React.js (with Vite setup) |
+| **Styling** | CSS3 |
+| **Routing** | React Router DOM |
+| **Data Source** | Local JavaScript array (`movies.js`) |
+| **Video Handling** | HTML5 `<video>` tag |
+
+---
+
+## Folder Structure
+
+```plaintext
+netflix-clone/
+│
+├── src/
+│   ├── components/
+│   │   ├── Login.jsx
+│   │   ├── Home.jsx
+│   │   ├── MovieGrid.jsx
+│   │   ├── Login.css
+│   │   ├── Home.css
+│   │   ├── MovieGrid.css
+│   ├── movies.js
+│   ├── App.jsx
+│   ├── main.jsx
+│
+├── public/
+│   └── movie-posters/
+│
+├── package.json
+├── vite.config.js
+└── README.md
+
+## Setup Instructions
+
+1. **Clone the repository**
+```
+git clone repo-url
+```
+
+2. **Navigate into the project folder**
+```
+cd netflix-clone
+```
+
+3. **Install dependencies**
+```
+npm install
+```
+
+4. **Start the development server**
+```
+npm start
+```
+
+5. **Open the app in your browser**  
+Go to [http://localhost:3000](http://localhost:3000)
+
+## How It Works
+
+- The app displays **9 movies** in a Netflix-like interface with hover and playback interactions.  
+- **Banner:** A random movie is selected as the main banner on page load.  
+- **Hover Effect:** Hovering over a movie card plays its video preview in place of the poster.  
+- **Play Movie:** Clicking a movie (or the banner Play button) opens a **full-screen video player**.  
+- **Back Button:** Clicking Back closes the video and returns to the main page.  
+- The project uses **React.js** for UI, **CSS** for styling, and **React state** to manage hovered/selected movies.
